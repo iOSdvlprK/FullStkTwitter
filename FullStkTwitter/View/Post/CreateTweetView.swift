@@ -8,8 +8,33 @@
 import SwiftUI
 
 struct CreateTweetView: View {
+    @State var text = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Button(action: {
+                    
+                }, label: {
+                    Text("Cancel")
+                })
+                
+                Spacer()
+                
+                Button(action: {
+                    
+                }, label: {
+                    Text("Tweet")
+                        .padding()
+                })
+                .background(Color("bg"))
+                .foregroundColor(.white)
+                .clipShape(Capsule())
+            }
+            
+            MultilineTextField(text: $text)
+        }
+        .padding()
     }
 }
 
