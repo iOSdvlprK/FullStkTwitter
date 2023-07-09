@@ -18,6 +18,7 @@
 		D83431D22A59B084001D3F14 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431D12A59B084001D3F14 /* MessagesView.swift */; };
 		D83431D62A5ABD7D001D3F14 /* CreateTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431D52A5ABD7D001D3F14 /* CreateTweetView.swift */; };
 		D83431D82A5ABF87001D3F14 /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431D72A5ABF87001D3F14 /* MultilineTextField.swift */; };
+		D83431DA2A5ADB9E001D3F14 /* TweetCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431D92A5ADB9E001D3F14 /* TweetCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D83431D12A59B084001D3F14 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		D83431D52A5ABD7D001D3F14 /* CreateTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTweetView.swift; sourceTree = "<group>"; };
 		D83431D72A5ABF87001D3F14 /* MultilineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
+		D83431D92A5ADB9E001D3F14 /* TweetCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				D83431CB2A59B054001D3F14 /* Feed.swift */,
+				D83431D92A5ADB9E001D3F14 /* TweetCellView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83431DA2A5ADB9E001D3F14 /* TweetCellView.swift in Sources */,
 				D83431D62A5ABD7D001D3F14 /* CreateTweetView.swift in Sources */,
 				D83431CE2A59B062001D3F14 /* SearchView.swift in Sources */,
 				D83431AF2A59A7CB001D3F14 /* ContentView.swift in Sources */,
