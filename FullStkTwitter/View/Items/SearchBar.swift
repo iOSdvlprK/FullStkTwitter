@@ -26,6 +26,18 @@ struct SearchBar: View {
                             .padding(.leading, 8)
                     }
                 }
+            
+            Button(action: {
+                isEditing = false
+                text = ""
+                UIApplication.shared.endEditing()
+            }, label: {
+                Text("Cancel")
+                    .foregroundColor(.black)
+                    .padding(.trailing, 8)
+//                    .transition(.move(edge: .trailing))
+//                    .animation(.default, value: 200) // value: TBD (https://stackoverflow.com/a/69443655)
+            })
         }
         .onTapGesture {
             isEditing = true

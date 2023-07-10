@@ -11,7 +11,7 @@ import SwiftUI
 struct FullStkTwitterApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Home()
         }
     }
 }

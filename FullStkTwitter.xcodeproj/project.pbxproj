@@ -21,6 +21,8 @@
 		D83431DA2A5ADB9E001D3F14 /* TweetCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431D92A5ADB9E001D3F14 /* TweetCellView.swift */; };
 		D83431DC2A5AF226001D3F14 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431DB2A5AF226001D3F14 /* SearchCell.swift */; };
 		D83431DE2A5AF923001D3F14 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431DD2A5AF923001D3F14 /* SearchBar.swift */; };
+		D83431E02A5BC515001D3F14 /* SearchUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431DF2A5BC515001D3F14 /* SearchUserCell.swift */; };
+		D83431E22A5BF6EB001D3F14 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431E12A5BF6EB001D3F14 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		D83431D92A5ADB9E001D3F14 /* TweetCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellView.swift; sourceTree = "<group>"; };
 		D83431DB2A5AF226001D3F14 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		D83431DD2A5AF923001D3F14 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		D83431DF2A5BC515001D3F14 /* SearchUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserCell.swift; sourceTree = "<group>"; };
+		D83431E12A5BF6EB001D3F14 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 		D83431BF2A59AA1A001D3F14 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D83431E12A5BF6EB001D3F14 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			children = (
 				D83431CD2A59B062001D3F14 /* SearchView.swift */,
 				D83431DB2A5AF226001D3F14 /* SearchCell.swift */,
+				D83431DF2A5BC515001D3F14 /* SearchUserCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 				D83431DC2A5AF226001D3F14 /* SearchCell.swift in Sources */,
 				D83431D62A5ABD7D001D3F14 /* CreateTweetView.swift in Sources */,
 				D83431CE2A59B062001D3F14 /* SearchView.swift in Sources */,
+				D83431E02A5BC515001D3F14 /* SearchUserCell.swift in Sources */,
 				D83431AF2A59A7CB001D3F14 /* ContentView.swift in Sources */,
 				D83431DE2A5AF923001D3F14 /* SearchBar.swift in Sources */,
 				D83431CC2A59B054001D3F14 /* Feed.swift in Sources */,
@@ -293,6 +300,7 @@
 				D83431D82A5ABF87001D3F14 /* MultilineTextField.swift in Sources */,
 				D83431AD2A59A7CB001D3F14 /* FullStkTwitterApp.swift in Sources */,
 				D83431D02A59B074001D3F14 /* NotificationsView.swift in Sources */,
+				D83431E22A5BF6EB001D3F14 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
