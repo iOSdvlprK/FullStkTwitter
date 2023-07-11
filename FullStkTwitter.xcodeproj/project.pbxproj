@@ -27,6 +27,9 @@
 		D83431E62A5C650A001D3F14 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431E52A5C650A001D3F14 /* MessageCell.swift */; };
 		D83431E82A5C6B9E001D3F14 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431E72A5C6B9E001D3F14 /* TopBar.swift */; };
 		D83431EA2A5C6E04001D3F14 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431E92A5C6E04001D3F14 /* MainView.swift */; };
+		D83431EC2A5D4B01001D3F14 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431EB2A5D4B01001D3F14 /* SlideMenu.swift */; };
+		D83431EE2A5D4D40001D3F14 /* FollowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431ED2A5D4D40001D3F14 /* FollowView.swift */; };
+		D83431F02A5D7ADB001D3F14 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431EF2A5D7ADB001D3F14 /* MenuButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		D83431E52A5C650A001D3F14 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		D83431E72A5C6B9E001D3F14 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		D83431E92A5C6E04001D3F14 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D83431EB2A5D4B01001D3F14 /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
+		D83431ED2A5D4D40001D3F14 /* FollowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowView.swift; sourceTree = "<group>"; };
+		D83431EF2A5D7ADB001D3F14 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,8 @@
 			children = (
 				D83431D72A5ABF87001D3F14 /* MultilineTextField.swift */,
 				D83431DD2A5AF923001D3F14 /* SearchBar.swift */,
+				D83431ED2A5D4D40001D3F14 /* FollowView.swift */,
+				D83431EF2A5D7ADB001D3F14 /* MenuButton.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -225,6 +233,7 @@
 				D83431C92A59AAE5001D3F14 /* Home.swift */,
 				D83431E72A5C6B9E001D3F14 /* TopBar.swift */,
 				D83431E92A5C6E04001D3F14 /* MainView.swift */,
+				D83431EB2A5D4B01001D3F14 /* SlideMenu.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -299,11 +308,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83431F02A5D7ADB001D3F14 /* MenuButton.swift in Sources */,
 				D83431DA2A5ADB9E001D3F14 /* TweetCellView.swift in Sources */,
 				D83431EA2A5C6E04001D3F14 /* MainView.swift in Sources */,
 				D83431E62A5C650A001D3F14 /* MessageCell.swift in Sources */,
 				D83431DC2A5AF226001D3F14 /* SearchCell.swift in Sources */,
 				D83431D62A5ABD7D001D3F14 /* CreateTweetView.swift in Sources */,
+				D83431EC2A5D4B01001D3F14 /* SlideMenu.swift in Sources */,
 				D83431CE2A59B062001D3F14 /* SearchView.swift in Sources */,
 				D83431E02A5BC515001D3F14 /* SearchUserCell.swift in Sources */,
 				D83431AF2A59A7CB001D3F14 /* ContentView.swift in Sources */,
@@ -311,6 +322,7 @@
 				D83431CC2A59B054001D3F14 /* Feed.swift in Sources */,
 				D83431E82A5C6B9E001D3F14 /* TopBar.swift in Sources */,
 				D83431CA2A59AAE5001D3F14 /* Home.swift in Sources */,
+				D83431EE2A5D4D40001D3F14 /* FollowView.swift in Sources */,
 				D83431D22A59B084001D3F14 /* MessagesView.swift in Sources */,
 				D83431D82A5ABF87001D3F14 /* MultilineTextField.swift in Sources */,
 				D83431AD2A59A7CB001D3F14 /* FullStkTwitterApp.swift in Sources */,
