@@ -32,6 +32,7 @@
 		D83431F02A5D7ADB001D3F14 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431EF2A5D7ADB001D3F14 /* MenuButton.swift */; };
 		D83431F22A5ED334001D3F14 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431F12A5ED334001D3F14 /* UserProfile.swift */; };
 		D83431F42A5ED814001D3F14 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431F32A5ED814001D3F14 /* BlurView.swift */; };
+		D83431F62A6027DC001D3F14 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431F52A6027DC001D3F14 /* TabButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		D83431EF2A5D7ADB001D3F14 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		D83431F12A5ED334001D3F14 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		D83431F32A5ED814001D3F14 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		D83431F52A6027DC001D3F14 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				D83431DD2A5AF923001D3F14 /* SearchBar.swift */,
 				D83431ED2A5D4D40001D3F14 /* FollowView.swift */,
 				D83431EF2A5D7ADB001D3F14 /* MenuButton.swift */,
+				D83431F52A6027DC001D3F14 /* TabButton.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				D83431D82A5ABF87001D3F14 /* MultilineTextField.swift in Sources */,
 				D83431AD2A59A7CB001D3F14 /* FullStkTwitterApp.swift in Sources */,
 				D83431D02A59B074001D3F14 /* NotificationsView.swift in Sources */,
+				D83431F62A6027DC001D3F14 /* TabButton.swift in Sources */,
 				D83431E42A5C46CF001D3F14 /* NotificationCell.swift in Sources */,
 				D83431E22A5BF6EB001D3F14 /* Extensions.swift in Sources */,
 			);

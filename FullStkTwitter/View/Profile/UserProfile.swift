@@ -10,6 +10,9 @@ import SwiftUI
 struct UserProfile: View {
     @State private var offset: CGFloat = 0
     @State private var titleOffset: CGFloat = 0
+    @State private var currentTab = "Tweets"
+    @State private var tabBarOffset: CGFloat = 0
+    @Namespace var animation
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -61,7 +64,7 @@ struct UserProfile: View {
                             .frame(width: 75, height: 75)
                             .clipShape(Circle())
                             .padding(8)
-                            .background(Color.white)
+                            .background(Color.white.clipShape(Circle()))
                             .offset(y: offset < 0 ? getOffset() - 20 : -20)
                             .scaleEffect(getScale())
                         
@@ -109,9 +112,66 @@ struct UserProfile: View {
                                 .foregroundColor(.gray)
                         }
                     }
+                    .overlay(alignment: .top) {
+                        GeometryReader { proxy -> Color in
+                            let minY = proxy.frame(in: .global).minY
+                            
+                            DispatchQueue.main.async {
+                                self.titleOffset = minY
+                            }
+                            
+                            return Color.clear
+                        }
+                        .frame(width: 0, height: 0)
+                    }
+                    
+                    VStack(spacing: 0) {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 0) {
+                                TabButton(title: "Tweets", currentTab: $currentTab, animation: animation)
+                                TabButton(title: "Tweets & Likes", currentTab: $currentTab, animation: animation)
+                                TabButton(title: "Media", currentTab: $currentTab, animation: animation)
+                                TabButton(title: "Likes", currentTab: $currentTab, animation: animation)
+                            }
+                        }
+                        
+                        Divider()
+                    }
+                    .padding(.top, 30)
+                    .background(Color.white)
+                    .offset(y: tabBarOffset < 90 ? -tabBarOffset + 90 : 0)
+                    .overlay(alignment: .top) {
+                        GeometryReader { proxy -> Color in
+                            let minY = proxy.frame(in: .global).minY
+                            
+                            DispatchQueue.main.async {
+                                self.tabBarOffset = minY
+                            }
+                            
+                            return Color.clear
+                        }
+                        .frame(width: 0, height: 0)
+                    }
+                    .zIndex(1)
+                    
+                    VStack(spacing: 18) {
+                        TweetCellView(tweet: "Hey Tim, are those regular glasses?", tweetImage: "post")
+                        
+                        Divider()
+                        
+                        ForEach(0..<20, id: \.self) { _ in
+                            TweetCellView(tweet: sampleText)
+                            Divider()
+                        }
+                    }
+                    .padding(.top)
+                    .zIndex(0)
                 }
+                .padding(.horizontal)
+                .zIndex(-offset > 80 ? 0 : 1)
             }
         }
+        .ignoresSafeArea(.all, edges: .top)
     }
     
     func blurViewOpacity() -> Double {
