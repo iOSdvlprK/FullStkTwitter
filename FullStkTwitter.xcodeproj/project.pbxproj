@@ -30,6 +30,8 @@
 		D83431EC2A5D4B01001D3F14 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431EB2A5D4B01001D3F14 /* SlideMenu.swift */; };
 		D83431EE2A5D4D40001D3F14 /* FollowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431ED2A5D4D40001D3F14 /* FollowView.swift */; };
 		D83431F02A5D7ADB001D3F14 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431EF2A5D7ADB001D3F14 /* MenuButton.swift */; };
+		D83431F22A5ED334001D3F14 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431F12A5ED334001D3F14 /* UserProfile.swift */; };
+		D83431F42A5ED814001D3F14 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431F32A5ED814001D3F14 /* BlurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		D83431EB2A5D4B01001D3F14 /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
 		D83431ED2A5D4D40001D3F14 /* FollowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowView.swift; sourceTree = "<group>"; };
 		D83431EF2A5D7ADB001D3F14 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		D83431F12A5ED334001D3F14 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		D83431F32A5ED814001D3F14 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 		D83431C02A59AA5F001D3F14 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				D83431F12A5ED334001D3F14 /* UserProfile.swift */,
+				D83431F32A5ED814001D3F14 /* BlurView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 			files = (
 				D83431F02A5D7ADB001D3F14 /* MenuButton.swift in Sources */,
 				D83431DA2A5ADB9E001D3F14 /* TweetCellView.swift in Sources */,
+				D83431F42A5ED814001D3F14 /* BlurView.swift in Sources */,
 				D83431EA2A5C6E04001D3F14 /* MainView.swift in Sources */,
 				D83431E62A5C650A001D3F14 /* MessageCell.swift in Sources */,
 				D83431DC2A5AF226001D3F14 /* SearchCell.swift in Sources */,
@@ -324,6 +331,7 @@
 				D83431CA2A59AAE5001D3F14 /* Home.swift in Sources */,
 				D83431EE2A5D4D40001D3F14 /* FollowView.swift in Sources */,
 				D83431D22A59B084001D3F14 /* MessagesView.swift in Sources */,
+				D83431F22A5ED334001D3F14 /* UserProfile.swift in Sources */,
 				D83431D82A5ABF87001D3F14 /* MultilineTextField.swift in Sources */,
 				D83431AD2A59A7CB001D3F14 /* FullStkTwitterApp.swift in Sources */,
 				D83431D02A59B074001D3F14 /* NotificationsView.swift in Sources */,
