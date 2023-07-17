@@ -11,7 +11,8 @@ import SwiftUI
 struct FullStkTwitterApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+//            MainView()
+            LogInView()
         }
     }
 }
