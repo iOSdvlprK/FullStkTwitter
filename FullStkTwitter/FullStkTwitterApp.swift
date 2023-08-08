@@ -12,7 +12,8 @@ struct FullStkTwitterApp: App {
     var body: some Scene {
         WindowGroup {
 //            MainView()
-            LogInView()
+//            LogInView()
+            RegisterView()
         }
     }
 }
