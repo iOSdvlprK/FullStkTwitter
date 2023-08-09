@@ -35,6 +35,7 @@
 		D83431F62A6027DC001D3F14 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431F52A6027DC001D3F14 /* TabButton.swift */; };
 		D836281B2A81298500B783E0 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836281A2A81298500B783E0 /* AuthViewModel.swift */; };
 		D836281D2A8129C400B783E0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836281C2A8129C400B783E0 /* User.swift */; };
+		D8462E202A83C8C10087FE12 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8462E1F2A83C8C10087FE12 /* AuthServices.swift */; };
 		D8F162DE2A62DA97008B0458 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F162DD2A62DA97008B0458 /* WelcomeView.swift */; };
 		D8F162E02A642C32008B0458 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F162DF2A642C32008B0458 /* RegisterView.swift */; };
 		D8F162E22A642EBD008B0458 /* CustomAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F162E12A642EBD008B0458 /* CustomAuthTextField.swift */; };
@@ -73,6 +74,7 @@
 		D83431F52A6027DC001D3F14 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		D836281A2A81298500B783E0 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		D836281C2A8129C400B783E0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D8462E1F2A83C8C10087FE12 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 		D8F162DD2A62DA97008B0458 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		D8F162DF2A642C32008B0458 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		D8F162E12A642EBD008B0458 /* CustomAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthTextField.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		D83431BE2A59AA0B001D3F14 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D8462E1F2A83C8C10087FE12 /* AuthServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				D83431F02A5D7ADB001D3F14 /* MenuButton.swift in Sources */,
 				D83431DA2A5ADB9E001D3F14 /* TweetCellView.swift in Sources */,
 				D83431F42A5ED814001D3F14 /* BlurView.swift in Sources */,
+				D8462E202A83C8C10087FE12 /* AuthServices.swift in Sources */,
 				D83431EA2A5C6E04001D3F14 /* MainView.swift in Sources */,
 				D836281D2A8129C400B783E0 /* User.swift in Sources */,
 				D83431E62A5C650A001D3F14 /* MessageCell.swift in Sources */,
