@@ -12,6 +12,8 @@ struct LogInView: View {
     @State private var password = ""
     @State private var emailDone = false
     
+    @StateObject var viewModel = AuthViewModel()
+    
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -108,7 +110,7 @@ struct LogInView: View {
                 
                 VStack {
                     Button(action: {
-                        
+                        self.viewModel.login(email: email, password: password)
                     }, label: {
                         Capsule()
                             .frame(width: 360, height: 40, alignment: .center)

@@ -13,7 +13,8 @@ struct FullStkTwitterApp: App {
         WindowGroup {
 //            MainView()
 //            LogInView()
-            RegisterView()
+//            RegisterView()
+            LogInView()
         }
     }
 }
