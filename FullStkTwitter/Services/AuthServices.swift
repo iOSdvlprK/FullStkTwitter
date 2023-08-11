@@ -75,7 +75,7 @@ public class AuthServices {
             do {
                 if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
                     
-                    print(json)
+                    print("AuthServices > makeRequest -> json: \(json)")
                     completion(.success(data))
                 }
                 
@@ -83,6 +83,42 @@ public class AuthServices {
             catch {
                 completion(.failure(.decodingError))
                 print(error)
+            }
+        }
+        
+        task.resume()
+    }
+    
+    // fetch user function
+    static func fetchUser(id: String, completion: @escaping (Result<Data, AuthenticationError>) -> Void) {
+        let urlString = URL(string: "http://localhost:3000/users/\(id)")!
+        var urlRequest = URLRequest(url: urlString)
+        
+        let session = URLSession.shared
+        
+        urlRequest.httpMethod = "GET"
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        let task = session.dataTask(with: urlRequest) { data, res, err in
+            guard err == nil else { return }
+            
+            guard let data = data else {
+                completion(.failure(.invalidCredentials))
+                return
+            }
+            
+            completion(.success(data))
+            
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
+                    
+                    print("AuthServices > fetchUser -> json: \(json)")
+                }
+            }
+            catch let err {
+                completion(.failure(.invalidCredentials))
+                print(err)
             }
         }
         

@@ -153,7 +153,7 @@
 		D83431BC2A59A9E8001D3F14 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D836281A2A81298500B783E0 /* AuthViewModel.swift */,
+				D8462E212A866B330087FE12 /* Authentication */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -269,6 +269,14 @@
 				D83431EB2A5D4B01001D3F14 /* SlideMenu.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		D8462E212A866B330087FE12 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D836281A2A81298500B783E0 /* AuthViewModel.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
