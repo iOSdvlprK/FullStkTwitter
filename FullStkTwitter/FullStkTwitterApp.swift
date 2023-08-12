@@ -11,10 +11,7 @@ import SwiftUI
 struct FullStkTwitterApp: App {
     var body: some Scene {
         WindowGroup {
-//            MainView()
-//            LogInView()
-//            RegisterView()
-            LogInView()
+            ContentView().environmentObject(AuthViewModel.shared)
         }
     }
 }

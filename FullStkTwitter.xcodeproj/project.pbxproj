@@ -118,7 +118,6 @@
 				D83431BC2A59A9E8001D3F14 /* ViewModel */,
 				D83431BB2A59A9D1001D3F14 /* View */,
 				D83431AC2A59A7CB001D3F14 /* FullStkTwitterApp.swift */,
-				D83431AE2A59A7CB001D3F14 /* ContentView.swift */,
 				D83431B02A59A7CE001D3F14 /* Assets.xcassets */,
 				D83431B22A59A7CE001D3F14 /* FullStkTwitter.entitlements */,
 				D83431B32A59A7CE001D3F14 /* Preview Content */,
@@ -216,6 +215,7 @@
 		D83431C32A59AA70001D3F14 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				D83431AE2A59A7CB001D3F14 /* ContentView.swift */,
 				D8F162DD2A62DA97008B0458 /* WelcomeView.swift */,
 				D8F162DF2A642C32008B0458 /* RegisterView.swift */,
 				D8F162E52A657AB3008B0458 /* LogInView.swift */,

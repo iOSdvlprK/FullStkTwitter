@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+//    let user: User
+    
     @State private var width = UIScreen.main.bounds.width - 90
     @State private var x = -UIScreen.main.bounds.width + 90
     
@@ -60,8 +62,8 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+//struct MainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//    }
+//}

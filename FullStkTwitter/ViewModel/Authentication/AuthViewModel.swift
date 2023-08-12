@@ -14,19 +14,22 @@ class AuthViewModel: ObservableObject {
     init() {
         let defaults = UserDefaults.standard
         let token = defaults.object(forKey: "jsonwebtoken")
+        defaults.removeObject(forKey: "jsonwebtoken")
         
         if token != nil {
             isAuthenticated = true
-            
+
             if let userId = defaults.object(forKey: "userid") {
                 fetchUser(userId: userId as! String)
                 print("User fetched")
             }
-            else {
-                isAuthenticated = false
-            }
+        }
+        else {
+            isAuthenticated = false
         }
     }
+    
+    static let shared = AuthViewModel()
     
     func login(email: String, password: String) {
         let defaults = UserDefaults.standard
