@@ -12,7 +12,7 @@ struct RegisterView: View {
     @State private var email = ""
     @State private var password = ""
     
-    @StateObject var viewModel = AuthViewModel()
+    @EnvironmentObject var viewModel: AuthViewModel
     
     @Environment(\.presentationMode) var presentationMode
     

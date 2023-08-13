@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @State var width = UIScreen.main.bounds.width
+    
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -27,7 +31,7 @@ struct WelcomeView: View {
                 
                 Text("See what's happening in the world right now.")
                     .font(.system(size: 30, weight: .heavy, design: .default))
-                    .frame(width: (UIScreen.main.bounds.width * 0.9), alignment: .center)
+                    .frame(width: (width * 0.9), alignment: .center)
                 
                 Spacer(minLength: 0)
                 
@@ -82,7 +86,7 @@ struct WelcomeView: View {
                         Rectangle()
                             .foregroundColor(.gray)
                             .opacity(0.3)
-                            .frame(width: (UIScreen.main.bounds.width * 0.35), height: 1)
+                            .frame(width: (width * 0.35), height: 1)
                         
                         Text("Or")
                             .foregroundColor(.gray)
@@ -90,7 +94,7 @@ struct WelcomeView: View {
                         Rectangle()
                             .foregroundColor(.gray)
                             .opacity(0.3)
-                            .frame(width: (UIScreen.main.bounds.width * 0.35), height: 1)
+                            .frame(width: (width * 0.35), height: 1)
                     }
                     
                     NavigationLink(destination: RegisterView().navigationBarHidden(true)) {

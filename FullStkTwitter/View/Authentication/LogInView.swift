@@ -12,7 +12,7 @@ struct LogInView: View {
     @State private var password = ""
     @State private var emailDone = false
     
-    @StateObject var viewModel = AuthViewModel()
+    @EnvironmentObject var viewModel: AuthViewModel
     
     @Environment(\.presentationMode) var presentationMode
     
