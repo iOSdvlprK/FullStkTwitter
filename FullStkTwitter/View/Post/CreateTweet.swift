@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct CreateTweetView: View {
+struct CreateTweet: View {
+    @Binding var show: Bool
     @State var text = ""
+    
+    @ObservedObject var viewModel = CreateTweetViewModel()
     
     var body: some View {
         VStack {
             HStack {
                 Button(action: {
-                    
+                    self.show.toggle()
                 }, label: {
                     Text("Cancel")
                 })
@@ -22,6 +25,10 @@ struct CreateTweetView: View {
                 Spacer()
                 
                 Button(action: {
+                    if text != "" {
+                        self.viewModel.uploadPost(text: text)
+                    }
+                    self.show.toggle()
                     
                 }, label: {
                     Text("Tweet")
@@ -38,8 +45,8 @@ struct CreateTweetView: View {
     }
 }
 
-struct CreateTweetView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateTweetView()
-    }
-}
+//struct CreateTweetView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CreateTweet()
+//    }
+//}

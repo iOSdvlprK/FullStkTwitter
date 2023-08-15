@@ -72,11 +72,12 @@ public class AuthServices {
                 return
             }
             
+            completion(.success(data))
+
             do {
                 if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
                     
                     print("AuthServices > makeRequest -> json: \(json)")
-                    completion(.success(data))
                 }
                 
             }
