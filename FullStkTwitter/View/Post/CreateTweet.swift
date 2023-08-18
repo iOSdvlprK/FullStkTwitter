@@ -31,7 +31,7 @@ struct CreateTweet: View {
                 
                 Button(action: {
                     if text != "" {
-                        self.viewModel.uploadPost(text: text)
+                        self.viewModel.uploadPost(text: text, image: selectedImage)
                     }
                     self.show.toggle()
                     
