@@ -11,12 +11,15 @@ struct Home: View {
     @State private var selectedIndex = 0
     @State private var showCreateTweet = false
     @State private var text = ""
+    @Binding var x: CGFloat
+    
+    let user: User
     
     var body: some View {
         VStack {
             ZStack {
                 TabView {
-                    Feed()
+                    Feed(user: user)
                         .onTapGesture {
                             self.selectedIndex = 0
                         }
@@ -108,8 +111,8 @@ struct Home: View {
     }
 }
 
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Home()
-    }
-}
+//struct Home_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Home()
+//    }
+//}
