@@ -10,6 +10,8 @@
 		D8248CF02A8D0F6E00BB49AB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8248CEF2A8D0F6E00BB49AB /* ImagePicker.swift */; };
 		D8248CF22A8FA01200BB49AB /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8248CF12A8FA01200BB49AB /* ImageUploader.swift */; };
 		D8248CF52A90FF7B00BB49AB /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8248CF42A90FF7B00BB49AB /* FeedViewModel.swift */; };
+		D8248CF72A924DA300BB49AB /* TweetCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8248CF62A924DA300BB49AB /* TweetCellViewModel.swift */; };
+		D8248CFA2A925F7D00BB49AB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D8248CF92A925F7D00BB49AB /* Kingfisher */; };
 		D83431AD2A59A7CB001D3F14 /* FullStkTwitterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431AC2A59A7CB001D3F14 /* FullStkTwitterApp.swift */; };
 		D83431AF2A59A7CB001D3F14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83431AE2A59A7CB001D3F14 /* ContentView.swift */; };
 		D83431B12A59A7CE001D3F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D83431B02A59A7CE001D3F14 /* Assets.xcassets */; };
@@ -53,6 +55,7 @@
 		D8248CEF2A8D0F6E00BB49AB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		D8248CF12A8FA01200BB49AB /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		D8248CF42A90FF7B00BB49AB /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		D8248CF62A924DA300BB49AB /* TweetCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellViewModel.swift; sourceTree = "<group>"; };
 		D83431A92A59A7CB001D3F14 /* FullStkTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullStkTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83431AC2A59A7CB001D3F14 /* FullStkTwitterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullStkTwitterApp.swift; sourceTree = "<group>"; };
 		D83431AE2A59A7CB001D3F14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8248CFA2A925F7D00BB49AB /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				D8248CF42A90FF7B00BB49AB /* FeedViewModel.swift */,
+				D8248CF62A924DA300BB49AB /* TweetCellViewModel.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -329,6 +334,9 @@
 			dependencies = (
 			);
 			name = FullStkTwitter;
+			packageProductDependencies = (
+				D8248CF92A925F7D00BB49AB /* Kingfisher */,
+			);
 			productName = FullStkTwitter;
 			productReference = D83431A92A59A7CB001D3F14 /* FullStkTwitter.app */;
 			productType = "com.apple.product-type.application";
@@ -357,6 +365,9 @@
 				Base,
 			);
 			mainGroup = D83431A02A59A7CB001D3F14;
+			packageReferences = (
+				D8248CF82A925F7D00BB49AB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = D83431AA2A59A7CB001D3F14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -419,6 +430,7 @@
 				D8462E412A8BA8B90087FE12 /* CreateTweetViewModel.swift in Sources */,
 				D83431F62A6027DC001D3F14 /* TabButton.swift in Sources */,
 				D8248CF22A8FA01200BB49AB /* ImageUploader.swift in Sources */,
+				D8248CF72A924DA300BB49AB /* TweetCellViewModel.swift in Sources */,
 				D83431E42A5C46CF001D3F14 /* NotificationCell.swift in Sources */,
 				D83431E22A5BF6EB001D3F14 /* Extensions.swift in Sources */,
 			);
@@ -634,6 +646,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D8248CF82A925F7D00BB49AB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D8248CF92A925F7D00BB49AB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8248CF82A925F7D00BB49AB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D83431A12A59A7CB001D3F14 /* Project object */;
 }
