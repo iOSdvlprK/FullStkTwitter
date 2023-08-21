@@ -14,6 +14,8 @@ struct UserProfile: View {
     @State private var tabBarOffset: CGFloat = 0
     @Namespace var animation
     
+    let user: User
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 15) {
@@ -36,7 +38,7 @@ struct UserProfile: View {
                                 .opacity(blurViewOpacity())
                             
                             VStack(spacing: 5) {
-                                Text("Tim")
+                                Text(self.user.username)
                                     .fontWeight(.bold)
                                     .foregroundColor(.white)
                                 
@@ -85,12 +87,12 @@ struct UserProfile: View {
                     .padding(.bottom, -10)
                     
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("Tim")
+                        Text(self.user.username)
                             .font(.title2)
                             .fontWeight(.bold)
                             .foregroundColor(.primary)
                         
-                        Text("@tim_cook")
+                        Text("@\(self.user.username)")
                             .foregroundColor(.gray)
                         
                         Text("CEO of Apple and serves on its board of directors and former vice president of Corporate Materials for Compaq")
@@ -192,8 +194,8 @@ struct UserProfile: View {
     }
 }
 
-struct UserProfile_Previews: PreviewProvider {
-    static var previews: some View {
-        UserProfile()
-    }
-}
+//struct UserProfile_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserProfile()
+//    }
+//}

@@ -7,37 +7,40 @@
 
 import SwiftUI
 
+var menuButtons = ["Profile", "Lists", "Topics", "Bookmarks", "Moments"]
+
 struct SlideMenu: View {
     @State private var show = false
+    @State private var width = UIScreen.main.bounds.width
     
-    var menuButtons = ["Profile", "Lists", "Topics", "Bookmarks", "Moments"]
-//    var edges = UIApplication.shared.windows.first?.safeAreaInsets
-//    let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
-//    lazy var edges = windowScene?.windows.first?.safeAreaInsets
+    @ObservedObject var viewModel: AuthViewModel
+    
     var edges: UIEdgeInsets? {
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         return windowScene?.windows.first?.safeAreaInsets
     }
     
-    @State private var width = UIScreen.main.bounds.width
-    
     var body: some View {
         VStack {
             HStack(spacing: 0) {
                 VStack(alignment: .leading) {
-                    Image("tim-cook")
-                        .resizable()
-                        .frame(width: 60, height: 60)
-                        .clipShape(Circle())
+                    NavigationLink(destination: UserProfile(user: viewModel.currentUser!)) {
+                        Image("tim-cook")
+                            .resizable()
+                            .frame(width: 60, height: 60)
+                            .clipShape(Circle())
+                    }
                     
                     HStack(alignment: .top, spacing: 12) {
                         VStack(alignment: .leading, spacing: 12) {
-                            Text("Tim")
-                                .font(.title3)
-                                .fontWeight(.bold)
-                                .foregroundColor(.black)
+                            NavigationLink(destination: UserProfile(user: viewModel.currentUser!)) {
+                                Text(viewModel.currentUser!.username)
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                            }
                             
-                            Text("@tim_cook")
+                            Text("@\(viewModel.currentUser!.username)")
                                 .foregroundColor(.gray)
                             
                             HStack(spacing: 20) {
@@ -65,7 +68,9 @@ struct SlideMenu: View {
                     
                     VStack(alignment: .leading) {
                         ForEach(menuButtons, id: \.self) { item in
-                            MenuButton(title: item)
+                            NavigationLink(destination: UserProfile(user: viewModel.currentUser!)) {
+                                MenuButton(title: item)
+                            }
                         }
                         
                         Divider()
@@ -155,8 +160,8 @@ struct SlideMenu: View {
     }
 }
 
-struct SlideMenu_Previews: PreviewProvider {
-    static var previews: some View {
-        SlideMenu()
-    }
-}
+//struct SlideMenu_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SlideMenu()
+//    }
+//}
