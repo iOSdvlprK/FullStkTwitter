@@ -12,10 +12,21 @@ struct EditProfileView: View {
     @State private var profileImage: Image?
     @State private var selectedImage: UIImage?
     @State private var imagePickerPresented = false
-    @State private var name = ""
-    @State private var location = ""
-    @State private var bio = ""
-    @State private var website = ""
+    
+    @Binding var user: User
+    
+    @State private var name: String
+    @State private var location: String
+    @State private var bio: String
+    @State private var website: String
+    
+    init(user: Binding<User>) {
+        self._user = user
+        self._name = State(initialValue: self._user.name.wrappedValue)
+        self._location = State(initialValue: self._user.location.wrappedValue ?? "")
+        self._bio = State(initialValue: self._user.bio.wrappedValue ?? "")
+        self._website = State(initialValue: self._user.website.wrappedValue ?? "")
+    }
     
     var body: some View {
         VStack {
@@ -101,6 +112,9 @@ struct EditProfileView: View {
                         .padding(.leading, 12)
                     }
                     Spacer()
+                }
+                .onAppear {
+                    KingfisherManager.shared.cache.clearCache()
                 }
                 .padding(.top, -25)
                 .padding(.bottom, -10)

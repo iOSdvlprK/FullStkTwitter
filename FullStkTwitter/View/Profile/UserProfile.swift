@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct UserProfile: View {
+    let user: User
+    @ObservedObject var viewModel: ProfileViewModel
+    
+    @State private var editProfileShow = false
+    
     @State private var offset: CGFloat = 0
     @State private var titleOffset: CGFloat = 0
-    @State private var currentTab = "Tweets"
     @State private var tabBarOffset: CGFloat = 0
+    @State private var currentTab = "Tweets"
+    
+    // for smooth slide animation
     @Namespace var animation
     
-    let user: User
+    // for dark mode adoption
+    @Environment(\.colorScheme) var colorScheme
+    
+    init(user: User) {
+        self.user = user
+        self.viewModel = ProfileViewModel(user: user)
+    }
+    
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -73,7 +87,7 @@ struct UserProfile: View {
                         Spacer()
                         
                         Button(action: {
-                            
+                            self.editProfileShow.toggle()
                         }, label: {
                             Text("Edit Profile")
                                 .foregroundColor(.blue)
@@ -82,6 +96,12 @@ struct UserProfile: View {
                                 .background(Capsule()
                                     .stroke(Color.blue, lineWidth: 1.5))
                         })
+                        .sheet(isPresented: $editProfileShow) {
+                            
+                        } content: {
+                            EditProfileView(user: $viewModel.user)
+                        }
+
                     }
                     .padding(.top, -25)
                     .padding(.bottom, -10)
