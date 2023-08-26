@@ -53,6 +53,7 @@
 		D8F162E22A642EBD008B0458 /* CustomAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F162E12A642EBD008B0458 /* CustomAuthTextField.swift */; };
 		D8F162E42A6431A4008B0458 /* SecureAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F162E32A6431A4008B0458 /* SecureAuthTextField.swift */; };
 		D8F162E62A657AB3008B0458 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F162E52A657AB3008B0458 /* LogInView.swift */; };
+		D8F7D3C52A9A3A1100364EF8 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F7D3C42A9A3A1100364EF8 /* EditProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		D8F162E12A642EBD008B0458 /* CustomAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthTextField.swift; sourceTree = "<group>"; };
 		D8F162E32A6431A4008B0458 /* SecureAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAuthTextField.swift; sourceTree = "<group>"; };
 		D8F162E52A657AB3008B0458 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		D8F7D3C42A9A3A1100364EF8 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				D847E0862A98E3C6007126F0 /* ProfileViewModel.swift */,
+				D8F7D3C42A9A3A1100364EF8 /* EditProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F7D3C52A9A3A1100364EF8 /* EditProfileViewModel.swift in Sources */,
 				D8248CF52A90FF7B00BB49AB /* FeedViewModel.swift in Sources */,
 				D83431F02A5D7ADB001D3F14 /* MenuButton.swift in Sources */,
 				D83431DA2A5ADB9E001D3F14 /* TweetCellView.swift in Sources */,

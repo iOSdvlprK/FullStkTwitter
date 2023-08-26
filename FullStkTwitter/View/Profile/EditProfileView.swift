@@ -13,6 +13,8 @@ struct EditProfileView: View {
     @State private var selectedImage: UIImage?
     @State private var imagePickerPresented = false
     
+    @Environment(\.presentationMode) var mode
+    @ObservedObject var viewModel: EditProfileViewModel
     @Binding var user: User
     
     @State private var name: String
@@ -22,6 +24,7 @@ struct EditProfileView: View {
     
     init(user: Binding<User>) {
         self._user = user
+        self.viewModel = EditProfileViewModel(user: self._user.wrappedValue)
         self._name = State(initialValue: self._user.name.wrappedValue)
         self._location = State(initialValue: self._user.location.wrappedValue ?? "")
         self._bio = State(initialValue: self._user.bio.wrappedValue ?? "")
@@ -33,7 +36,7 @@ struct EditProfileView: View {
             ZStack {
                 HStack {
                     Button {
-                        
+                        self.mode.wrappedValue.dismiss()
                     } label: {
                         Text("Cancel")
                             .foregroundColor(.black)
@@ -42,7 +45,7 @@ struct EditProfileView: View {
                     Spacer()
 
                     Button {
-                        
+                        self.viewModel.save(name: name, bio: bio, website: website, location: location)
                     } label: {
                         Text("Save")
                             .foregroundColor(.black)
