@@ -45,7 +45,14 @@ struct EditProfileView: View {
                     Spacer()
 
                     Button {
-                        self.viewModel.uploadUserData(name: name, bio: bio, website: website, location: location)
+                        if (selectedImage != nil) {
+                            self.viewModel.uploadProfileImage(text: "text", image: selectedImage)
+                            self.viewModel.uploadUserData(name: name, bio: bio, website: website, location: location)
+                            KingfisherManager.shared.cache.clearCache()
+                        }
+                        else {
+                            self.viewModel.uploadUserData(name: name, bio: bio, website: website, location: location)
+                        }
                     } label: {
                         Text("Save")
                             .foregroundColor(.black)
