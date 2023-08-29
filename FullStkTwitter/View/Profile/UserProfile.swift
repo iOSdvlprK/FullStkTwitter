@@ -113,45 +113,77 @@ struct UserProfile: View {
                     .padding(.top, -25)
                     .padding(.bottom, -10)
                     
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text(self.user.username)
-                            .font(.title2)
-                            .fontWeight(.bold)
-                            .foregroundColor(.primary)
-                        
-                        Text("@\(self.user.username)")
-                            .foregroundColor(.gray)
-                        
-                        Text("CEO of Apple and serves on its board of directors and former vice president of Corporate Materials for Compaq")
-                        
-                        HStack(spacing: 5) {
-                            Text("780")
+                    HStack {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(self.viewModel.user.username)
+                                .font(.title2)
+                                .fontWeight(.bold)
                                 .foregroundColor(.primary)
-                                .fontWeight(.semibold)
                             
-                            Text("Followers")
+                            Text("@\(self.viewModel.user.username)")
                                 .foregroundColor(.gray)
                             
-                            Text("13")
-                                .foregroundColor(.primary)
-                                .fontWeight(.semibold)
-                                .padding(.leading, 10)
+                            Text(viewModel.user.bio ?? "CEO of Apple and serves on its board of directors and former vice president of Corporate Materials for Compaq")
                             
-                            Text("Following")
-                                .foregroundColor(.gray)
-                        }
-                    }
-                    .overlay(alignment: .top) {
-                        GeometryReader { proxy -> Color in
-                            let minY = proxy.frame(in: .global).minY
-                            
-                            DispatchQueue.main.async {
-                                self.titleOffset = minY
+                            HStack(spacing: 8) {
+                                if let userLocation = viewModel.user.location {
+                                    if (userLocation != "") {
+                                        HStack(spacing: 2) {
+                                            Image(systemName: "mappin.circle.fill")
+                                                .frame(width: 24, height: 24)
+                                                .foregroundColor(.gray)
+                                            Text(userLocation)
+                                                .foregroundColor(.gray)
+                                                .font(.system(size: 14))
+                                        }
+                                    }
+                                }
+                                
+                                if let userWebsite = viewModel.user.website {
+                                    if (userWebsite != "") {
+                                        HStack(spacing: 2) {
+                                            Image(systemName: "link")
+                                                .frame(width: 24, height: 24)
+                                                .foregroundColor(.gray)
+                                            Text(userWebsite)
+                                                .foregroundColor(Color("twitter"))
+                                                .font(.system(size: 14))
+                                        }
+                                    }
+                                }
                             }
                             
-                            return Color.clear
+                            HStack(spacing: 5) {
+                                Text("780")
+                                    .foregroundColor(.primary)
+                                    .fontWeight(.semibold)
+                                
+                                Text("Followers")
+                                    .foregroundColor(.gray)
+                                
+                                Text("13")
+                                    .foregroundColor(.primary)
+                                    .fontWeight(.semibold)
+                                    .padding(.leading, 10)
+                                
+                                Text("Following")
+                                    .foregroundColor(.gray)
+                            }
                         }
-                        .frame(width: 0, height: 0)
+                        .padding(.leading, 8)
+                        .overlay(alignment: .top) {
+                            GeometryReader { proxy -> Color in
+                                let minY = proxy.frame(in: .global).minY
+                                
+                                DispatchQueue.main.async {
+                                    self.titleOffset = minY
+                                }
+                                
+                                return Color.clear
+                            }
+                            .frame(width: 0, height: 0)
+                        }
+                        Spacer()
                     }
                     
                     VStack(spacing: 0) {
@@ -184,9 +216,9 @@ struct UserProfile: View {
                     .zIndex(1)
                     
                     VStack(spacing: 18) {
-                        
-                        
-                        
+                        ForEach(viewModel.tweets) { tweet in
+                            TweetCellView(viewModel: TweetCellViewModel(tweet: tweet))
+                        }
                     }
                     .padding(.top)
                     .zIndex(0)
