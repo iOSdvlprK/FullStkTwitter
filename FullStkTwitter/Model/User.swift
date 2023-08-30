@@ -26,4 +26,5 @@ struct User: Decodable, Identifiable {
     var avatarExists: Bool?
     var followers: [String]
     var followings: [String]
+    var isCurrentUser: Bool? = false
 }
