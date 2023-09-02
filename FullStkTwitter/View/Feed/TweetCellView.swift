@@ -82,7 +82,7 @@ struct TweetCellView: View {
                 .foregroundColor(.gray)
                 
                 Button(action: {
-                    
+                    self.viewModel.like()
                 }, label: {
                     Image("love")
                         .resizable()
