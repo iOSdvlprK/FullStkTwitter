@@ -248,7 +248,7 @@ struct UserProfile: View {
                     
                     VStack(spacing: 18) {
                         ForEach(viewModel.tweets) { tweet in
-                            TweetCellView(viewModel: TweetCellViewModel(tweet: tweet))
+                            TweetCellView(viewModel: TweetCellViewModel(tweet: tweet, currentUser: AuthViewModel.shared.currentUser!))
                         }
                     }
                     .padding(.top)
