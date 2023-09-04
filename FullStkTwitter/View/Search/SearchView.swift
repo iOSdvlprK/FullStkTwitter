@@ -13,15 +13,21 @@ struct SearchView: View {
     
     @ObservedObject var viewModel = SearchViewModel()
     
+    var users: [User] {
+        return text.isEmpty ? viewModel.users : viewModel.filteredUsers(text)
+    }
+    
     var body: some View {
         VStack {
             SearchBar(text: $text, isEditing: $isEditing)
                 .padding(.horizontal)
             
             LazyVStack {
-                ForEach(self.viewModel.users) { user in
-                    SearchUserCell(user: user)
-                        .padding(.leading)
+                ForEach(users) { user in
+                    NavigationLink(destination: UserProfile(user: user)) {
+                        SearchUserCell(user: user)
+                            .padding(.leading)
+                    }
                 }
             }
             
