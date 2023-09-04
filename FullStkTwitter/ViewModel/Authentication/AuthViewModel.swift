@@ -15,6 +15,10 @@ class AuthViewModel: ObservableObject {
         let defaults = UserDefaults.standard
         let token = defaults.object(forKey: "jsonwebtoken")
         
+//        print("PRE-token: \(String(describing: token))")
+//        logout()
+//        print("POST-token: \(String(describing: token))")
+        
         if token != nil {
             isAuthenticated = true
 

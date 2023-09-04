@@ -49,6 +49,7 @@
 		D8462E432A8BAAD50087FE12 /* RequestServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8462E422A8BAAD50087FE12 /* RequestServices.swift */; };
 		D847E0872A98E3C6007126F0 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D847E0862A98E3C6007126F0 /* ProfileViewModel.swift */; };
 		D866AFCA2AA4C953000CF9FD /* RefreshableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D866AFC92AA4C953000CF9FD /* RefreshableScrollView.swift */; };
+		D866AFCD2AA614A1000CF9FD /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D866AFCC2AA614A1000CF9FD /* SearchViewModel.swift */; };
 		D8F162DE2A62DA97008B0458 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F162DD2A62DA97008B0458 /* WelcomeView.swift */; };
 		D8F162E02A642C32008B0458 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F162DF2A642C32008B0458 /* RegisterView.swift */; };
 		D8F162E22A642EBD008B0458 /* CustomAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F162E12A642EBD008B0458 /* CustomAuthTextField.swift */; };
@@ -101,6 +102,7 @@
 		D8462E422A8BAAD50087FE12 /* RequestServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestServices.swift; sourceTree = "<group>"; };
 		D847E0862A98E3C6007126F0 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D866AFC92AA4C953000CF9FD /* RefreshableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableScrollView.swift; sourceTree = "<group>"; };
+		D866AFCC2AA614A1000CF9FD /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		D8F162DD2A62DA97008B0458 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		D8F162DF2A642C32008B0458 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		D8F162E12A642EBD008B0458 /* CustomAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthTextField.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		D83431BC2A59A9E8001D3F14 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D866AFCB2AA6148C000CF9FD /* Search */,
 				D847E0852A98E3A3007126F0 /* Profile */,
 				D8462E3F2A8BA87B0087FE12 /* PostTweet */,
 				D8462E212A866B330087FE12 /* Authentication */,
@@ -344,6 +347,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		D866AFCB2AA6148C000CF9FD /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D866AFCC2AA614A1000CF9FD /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -434,6 +445,7 @@
 				D8248CFC2A93A10400BB49AB /* EditProfileView.swift in Sources */,
 				D83431EC2A5D4B01001D3F14 /* SlideMenu.swift in Sources */,
 				D83431CE2A59B062001D3F14 /* SearchView.swift in Sources */,
+				D866AFCD2AA614A1000CF9FD /* SearchViewModel.swift in Sources */,
 				D83431E02A5BC515001D3F14 /* SearchUserCell.swift in Sources */,
 				D83431AF2A59A7CB001D3F14 /* ContentView.swift in Sources */,
 				D83431DE2A5AF923001D3F14 /* SearchBar.swift in Sources */,

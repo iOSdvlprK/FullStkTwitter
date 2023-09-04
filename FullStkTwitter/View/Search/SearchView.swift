@@ -11,20 +11,21 @@ struct SearchView: View {
     @State private var text = ""
     @State private var isEditing = false
     
+    @ObservedObject var viewModel = SearchViewModel()
+    
     var body: some View {
         VStack {
             SearchBar(text: $text, isEditing: $isEditing)
                 .padding(.horizontal)
             
-            if (!isEditing) {
-                List(0..<9) { i in
-                    SearchCell(tag: "Hello", tweets: String(i))
-                }
-            } else {
-                List(0..<9) { _ in
-                    SearchUserCell()
+            LazyVStack {
+                ForEach(self.viewModel.users) { user in
+                    SearchUserCell(user: user)
+                        .padding(.leading)
                 }
             }
+            
+            Spacer()
         }
     }
 }
