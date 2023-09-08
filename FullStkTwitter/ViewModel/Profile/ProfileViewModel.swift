@@ -21,7 +21,7 @@ class ProfileViewModel: ObservableObject {
     func fetchTweets() {
         RequestServices.requestDomain = "http://localhost:3000/tweets/\(self.user.id)"
         
-        RequestServices.fetchTweets { res in
+        RequestServices.fetchData { res in
             switch res {
             case .success(let data):
                 guard let tweets = try? JSONDecoder().decode([Tweet].self, from: data!) else { return }

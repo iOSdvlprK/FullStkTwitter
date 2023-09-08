@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct NotificationsView: View {
+    let user: User
+    
+    @ObservedObject var viewModel: NotificationsViewModel
+    
+    init(user: User) {
+        self.user = user
+        self.viewModel = NotificationsViewModel(user: user)
+    }
+    
     var body: some View {
         VStack {
             ScrollView {
@@ -20,8 +29,8 @@ struct NotificationsView: View {
     }
 }
 
-struct NotificationsView_Previews: PreviewProvider {
-    static var previews: some View {
-        NotificationsView()
-    }
-}
+//struct NotificationsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NotificationsView()
+//    }
+//}
